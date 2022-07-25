@@ -44,7 +44,7 @@ const getCircleCircumference = (radius) => 2 * Math.PI * radius;
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  return (BigInt(value1) + BigInt(value2)) / BigInt(2);
+  return value1 / 2 + value2 / 2;
 }
 /**
  * Returns a distance between two points by cartesian coordinates.
@@ -210,6 +210,7 @@ function isPrime(n) {
  *   toNumber(42, 0) => 42
  *   toNumber(new Number(42), 0) => 42
  */
+// eslint-disable-next-line no-restricted-globals
 const toNumber = (value, def) => (isNaN(+value) ? def : +value);
 
 module.exports = {
